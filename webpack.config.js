@@ -6,8 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 module.exports = function(env, argv) {
   return {
-    devtool: 'cheap-module-eval-source-map',
-    // devtool: 'cheap-module-source-map'
+    devtool: env.production ? 'cheap-module-source-map' : 'cheap-module-eval-source-map',
     entry: [
       './src/main.js',
       // 'webpack-hot-middleware/client?timeout=2000&overlay=false'
@@ -59,6 +58,9 @@ module.exports = function(env, argv) {
         }
       }]
     },
+    // optimization: {
+    //   usedExports: true
+    // },
     plugins: [
       new HtmlWebpackPlugin({
         template: path.join(__dirname, 'public/index.html')
