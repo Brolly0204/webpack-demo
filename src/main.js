@@ -1,14 +1,21 @@
-import './font/iconfont.css'
+import counter from './counter'
+import number from './number'
+// import './style.css'
 
-const root = document.getElementById('root')
+counter()
+number()
+
+// const btn = document.createElement('button')
+// btn.innerHTML = '新增'
+
+// btn.onclick = function() {
+//   const div = document.createElement('div')
+//   div.innerHTML = 'item'
+//   document.body.appendChild(div)
+// }
+
+// document.body.appendChild(btn)
 
 if (module.hot) {
-  module.hot.accept();
+  module.hot.accept()
 }
-
-root.innerHTML = `
-  <div class="iconfont icon-fenxiang"></div>
-  <div class="iconfont icon-iconfontfenxiang"></div>
-`
-
-console.log('hello Brolly!!!')

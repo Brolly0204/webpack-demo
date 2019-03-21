@@ -10,7 +10,7 @@ module.exports = function(env, argv) {
     // devtool: 'cheap-module-source-map'
     entry: [
       './src/main.js',
-      'webpack-hot-middleware/client?timeout=2000&overlay=false'
+      // 'webpack-hot-middleware/client?timeout=2000&overlay=false'
     ],
     output: {
       filename: '[name]_[hash:5].js',
@@ -18,7 +18,9 @@ module.exports = function(env, argv) {
       publicPath: '/'
     },
     devServer: {
-      contentBase: 'dist/'
+      contentBase: 'dist/',
+      hot: true,
+      hotOnly: true
     },
     module: {
       rules: [{
