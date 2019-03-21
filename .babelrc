@@ -1,18 +1,18 @@
 {
   "presets": [["@babel/preset-env", {
-    // "useBuiltIns": "usage",
-    // "corejs": 3,
+    "useBuiltIns": "usage",
+    "corejs": 3,
     "targets": {
       "browsers": ["last 2 versions"]
     }
-  }]],
-  "plugins": [
-    ["@babel/plugin-transform-runtime", {
-        "absoluteRuntime": false,
-        "corejs": 2,
-        "helpers": true,
-        "regenerator": true,
-        "useESModules": false
-    }]
-  ]
+  }], "@babel/preset-react"],
+  // "plugins": [
+  //   ["@babel/plugin-transform-runtime", {
+  //       "absoluteRuntime": false,
+  //       "corejs": 2,
+  //       "helpers": true,
+  //       "regenerator": true,
+  //       "useESModules": false
+  //   }]
+  // ]
 }
